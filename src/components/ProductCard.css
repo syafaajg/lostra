@@ -1,0 +1,100 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    /* Menandakan bisa diklik */
+}
+
+/* ... rest of css remains same (will just append append logic if tool supports, but rewrite safety) */
+
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f4f0ea;
+    margin-bottom: 1rem;
+    aspect-ratio: 1 / 1.1;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    border-radius: 8px 0 0 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+}
+
+.product-card:hover .add-to-cart-btn {
+    transform: translateY(0);
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s;
+    font-size: 1rem;
+    color: var(--color-primary);
+    border: none;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 0.25rem;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}

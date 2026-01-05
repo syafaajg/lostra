@@ -1,0 +1,95 @@
+.how-to-order {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.how-to-order .section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.how-to-order .section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #d4a373;
+    /* Example accent color from theme */
+    margin: 10px auto 0;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.step-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: #d4a373;
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    color: white;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.step-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .steps-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+}

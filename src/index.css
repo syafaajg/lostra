@@ -1,0 +1,117 @@
+:root {
+  /* Rebranding to LUSTRA (Luxury Dark Theme) */
+  --color-bg: #121212;
+  /* Deep Dark Background */
+  --color-surface: #1E1E1E;
+  /* Slightly lighter for cards */
+  --color-text-main: #FFFFFF;
+  /* White text */
+  --color-text-muted: #A0A0A0;
+  /* Grey text */
+
+  --color-primary: #D4AF37;
+  /* Metallic Gold */
+  --color-primary-dark: #B5952F;
+
+  --color-accent: #FFFFFF;
+  /* High contrast accent */
+  --color-secondary: #2C2C2C;
+
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.5);
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  border-radius: 0;
+  /* Boxy buttons for luxury feel */
+  font-weight: 400;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #000;
+  /* Black text on Gold background */
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-text-main);
+  color: var(--color-text-main);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-text-main);
+  color: #000;
+}
